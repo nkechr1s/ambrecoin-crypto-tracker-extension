@@ -4,9 +4,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
     const fetchCryptoData = () => {
         const storedData = JSON.parse(localStorage.getItem(`cryptoData_${currentCurrency}`));
-        if (storedData && Date.now() - storedData.timestamp < 5 * 60 * 1000) {
+        if (storedData && Date.now() - storedData?.timestamp < 5 * 60 * 1000) {
             // Use cached data if not expired
-            showCryptoData(storedData.data);
+            showCryptoData(storedData?.data);
         } else {
             // Fetch new data from API
             fetch(apiUrl)
