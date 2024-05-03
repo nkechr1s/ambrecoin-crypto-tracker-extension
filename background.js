@@ -4,18 +4,29 @@ document.addEventListener("DOMContentLoaded", function () {
 
     const fetchCryptoData = () => {
         fetch(apiUrl)
-            .then((response) => response.json())
+            .then((response) => {
+                if (!response.ok) {
+                    throw new Error('Network response was not ok');
+                }
+                return response.json();
+            })
             .then((data) => {
                 showCryptoData(data);
             })
             .catch((error) => {
                 console.error("Error fetching data:", error);
+                displayError();
             });
     };
 
     const showCryptoData = (coins) => {
         const coinsContainer = document.getElementById("coins-container");
         coinsContainer.innerHTML = ""; // Clear previous content
+
+        if (coins?.length === 0) {
+            displayNoData();
+            return;
+        }
 
         coins?.forEach((coin) => {
             const row = document.createElement("tr");
@@ -55,6 +66,16 @@ document.addEventListener("DOMContentLoaded", function () {
 
             coinsContainer.appendChild(row);
         });
+    };
+
+    const displayNoData = () => {
+        const coinsContainer = document.getElementById("coins-container");
+        coinsContainer.innerHTML = "<tr><td colspan='3'>No data available</td></tr>";
+    };
+
+    const displayError = () => {
+        const coinsContainer = document.getElementById("coins-container");
+        coinsContainer.innerHTML = "<tr><td colspan='3'>Error fetching data</td></tr>";
     };
 
     fetchCryptoData();
