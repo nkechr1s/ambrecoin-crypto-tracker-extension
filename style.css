@@ -80,3 +80,19 @@ body {
   transform: translateY(-50%);
   pointer-events: none;
 }
+
+.coin-gecko-logo {
+  position: relative;
+  background-image: url("./coingeckgo.db91da90.png");
+  display: inline-block;
+  background-position: 100%;
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 25px;
+  height: 25px;
+}
+.data-provider {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
