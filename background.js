@@ -3,20 +3,28 @@ document.addEventListener("DOMContentLoaded", function () {
     let apiUrl = `https://api.coingecko.com/api/v3/coins/markets?vs_currency=${currentCurrency}&order=market_cap_desc`;
 
     const fetchCryptoData = () => {
-        fetch(apiUrl)
-            .then((response) => {
-                if (!response.ok) {
-                    throw new Error('Network response was not ok');
-                }
-                return response.json();
-            })
-            .then((data) => {
-                showCryptoData(data);
-            })
-            .catch((error) => {
-                console.error("Error fetching data:", error);
-                displayError();
-            });
+        const storedData = JSON.parse(localStorage.getItem(`cryptoData_${currentCurrency}`));
+        if (storedData && Date.now() - storedData.timestamp < 5 * 60 * 1000) {
+            // Use cached data if not expired
+            showCryptoData(storedData.data);
+        } else {
+            // Fetch new data from API
+            fetch(apiUrl)
+                .then((response) => {
+                    if (!response.ok) {
+                        throw new Error('Network response was not ok');
+                    }
+                    return response.json();
+                })
+                .then((data) => {
+                    localStorage.setItem(`cryptoData_${currentCurrency}`, JSON.stringify({ data: data, timestamp: Date.now() }));
+                    showCryptoData(data);
+                })
+                .catch((error) => {
+                    console.error("Error fetching data:", error);
+                    displayError();
+                });
+        }
     };
 
     const showCryptoData = (coins) => {
