@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", function () {
-    let currentCurrency = "usd"; // Default currency
+    let currentCurrency = localStorage.getItem("currentCurrencyExtension") || "usd"; // Default currency
     let apiUrl = `https://api.coingecko.com/api/v3/coins/markets?vs_currency=${currentCurrency}&order=market_cap_desc`;
 
     const fetchCryptoData = () => {
@@ -76,9 +76,11 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
     const changeCurrencySelect = document.getElementById("change-currency-select");
+    changeCurrencySelect.value = currentCurrency;
     changeCurrencySelect.addEventListener("change", function () {
         currentCurrency = this.value;
         apiUrl = `https://api.coingecko.com/api/v3/coins/markets?vs_currency=${currentCurrency}&order=market_cap_desc`;
+        localStorage.setItem("currentCurrencyExtension", currentCurrency); 
         fetchCryptoData();
 
         searchInput.value = "";
