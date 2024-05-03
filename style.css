@@ -2,6 +2,7 @@
 
 body {
   font-family: 'Roboto', sans-serif;
+  width:320px;
 }
 
 
@@ -38,4 +39,16 @@ body {
 .image-and-name {
   display: flex;
   align-items: center;
+}
+
+#search-input {
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  width: 200px;
+  margin-bottom: 10px;
+}
+
+#search-input::placeholder {
+  color: #999;
 }
