@@ -1,21 +1,20 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
 
 body {
-  font-family: 'Roboto', sans-serif;
-  width:320px;
+  font-family: "Roboto", sans-serif;
+  width: 320px;
 }
-
 
 #coins-table {
   width: 100%;
   border-collapse: collapse;
-
 }
 
-#coins-table th, #coins-table td {
+#coins-table th,
+#coins-table td {
   border: 1px solid #ccc;
   padding: 8px;
-  font-weight:700;
+  font-weight: 700;
 }
 
 #coins-table th {
@@ -93,8 +92,29 @@ body {
 }
 .data-provider {
   display: flex;
-  flex-direction:column;
-  margin-top:10px;
+  flex-direction: column;
+  margin-top: 10px;
   align-items: center;
   justify-content: space-between;
+}
+
+body::-webkit-scrollbar {
+  width: 8px;
+}
+
+/* Track */
+body::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Handle */
+body::-webkit-scrollbar-thumb {
+  background: linear-gradient(135deg, #6a8feb, #a17df4); 
+  border-radius: 8px;
+}
+
+/* Handle on hover */
+body::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(135deg, #8c4eff, #6a00ff);
+  cursor:pointer;
 }
