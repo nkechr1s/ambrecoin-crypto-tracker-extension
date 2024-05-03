@@ -80,5 +80,7 @@ document.addEventListener("DOMContentLoaded", function () {
         currentCurrency = this.value;
         apiUrl = `https://api.coingecko.com/api/v3/coins/markets?vs_currency=${currentCurrency}&order=market_cap_desc`;
         fetchCryptoData();
+
+        searchInput.value = "";
     });
 });
