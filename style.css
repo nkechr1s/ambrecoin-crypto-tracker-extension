@@ -1,0 +1,41 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+body {
+  font-family: 'Roboto', sans-serif;
+}
+
+
+#coins-table {
+  width: 100%;
+  border-collapse: collapse;
+
+}
+
+#coins-table th, #coins-table td {
+  border: 1px solid #ccc;
+  padding: 8px;
+  font-weight:700;
+}
+
+#coins-table th {
+  background-color: #f2f2f2;
+}
+
+#coins-table img {
+  max-width: 25px;
+  max-height: 25px;
+  margin-right: 10px;
+}
+
+.price-change {
+  color: green;
+}
+
+.price-change.negative {
+  color: red;
+}
+
+.image-and-name {
+  display: flex;
+  align-items: center;
+}
