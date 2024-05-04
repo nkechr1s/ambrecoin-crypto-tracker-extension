@@ -146,4 +146,17 @@ document.addEventListener("DOMContentLoaded", function () {
 
     searchInput.value = "";
   });
+
+  //Dark mode logic
+  const darkModeEnabled = localStorage.getItem("darkModeEnabled") === "true";
+  if (darkModeEnabled) {
+    document.body.classList.add("dark-mode");
+    document.getElementById("dark-mode-toggle").checked = true;
+  }
+
+  document.getElementById("dark-mode-toggle").addEventListener("change", () => {
+    const darkModeEnabled = document.getElementById("dark-mode-toggle").checked;
+    document.body.classList.toggle("dark-mode", darkModeEnabled);
+    localStorage.setItem("darkModeEnabled", darkModeEnabled);
+  });
 });
