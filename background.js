@@ -204,6 +204,22 @@ document.addEventListener("DOMContentLoaded", function () {
     allCoinsTab.classList.remove("active-tab");
     showFavoriteCoins();
   });
+  
+  const searchInput = document.getElementById("search-input");
+  searchInput.addEventListener("input", function () {
+    const searchText = this.value.toLowerCase();
+    const coinRows = document.querySelectorAll("#coins-container tr");
+    coinRows.forEach((row) => {
+      const coinName = row
+        .querySelector(".image-and-name span")
+        .textContent.toLowerCase();
+      if (coinName.includes(searchText)) {
+        row.style.display = "table-row";
+      } else {
+        row.style.display = "none";
+      }
+    });
+  });
 
   const changeCurrencySelect = document.getElementById(
     "change-currency-select"
