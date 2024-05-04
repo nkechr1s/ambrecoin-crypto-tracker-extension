@@ -116,9 +116,9 @@ document.addEventListener("DOMContentLoaded", function () {
     // Create SVG heart icon
     const heartSVG = `
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="${
-      isFavorite ? "red" : "none"
+      isFavorite ? "#dc3545" : "none"
     }" stroke="${
-      isFavorite ? "none" : "red"
+      isFavorite ? "none" : "#dc3545"
     }" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
       <path d="M20 4.5a5.36 5.36 0 0 0-7.55 0L12 5.94l-1.45-1.45a5.36 5.36 0 0 0-7.55 7.55L12 21l8.45-8.45a5.36 5.36 0 0 0 0-7.55z"></path>
     </svg>
