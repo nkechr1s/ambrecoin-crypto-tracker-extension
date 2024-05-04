@@ -165,11 +165,11 @@ body.dark-mode {
 }
 
 input:checked + .slider {
-  background-color: #2196f3;
+  background-color:  #2196F3;
 }
 
 input:focus + .slider {
-  box-shadow: 0 0 1px #2196f3;
+  box-shadow: 0 0 1px  #2196F3;
 }
 
 input:checked + .slider:before {
@@ -184,8 +184,15 @@ input:checked + .slider:before {
   flex-direction: row;
   align-items: center;
   margin-bottom: 10px;
+  background:#4608ad;
+  padding:10px;
+  margin-left:-8px;
+  margin-right:-8px;
+  margin-top:-8px;
 }
 
 .header h1 {
   margin: unset;
+  font-size:20px;
+  color:white;
 }
