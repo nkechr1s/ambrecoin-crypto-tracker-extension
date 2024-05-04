@@ -211,3 +211,9 @@ input:checked + .slider:before {
   align-items: center;
   gap: 5px;
 }
+
+.favorite-button svg {
+  width: 20px;
+  height: 20px;
+  cursor:pointer;
+}
