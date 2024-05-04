@@ -34,11 +34,11 @@ body {
 }
 
 .price-change {
-  color: green;
+  color: #20c997;
 }
 
 .price-change.negative {
-  color: red;
+  color: #dc3545;
 }
 
 .image-and-name {
