@@ -99,6 +99,7 @@ document.addEventListener("DOMContentLoaded", function () {
     priceChangeCell.textContent = `${coin.price_change_percentage_24h.toFixed(
       2
     )}%`;
+    priceChangeCell.classList.add("price-change");
     if (coin.price_change_percentage_24h < 0) {
       priceChangeCell.classList.add("negative");
     }
