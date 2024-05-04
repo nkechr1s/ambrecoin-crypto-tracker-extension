@@ -3,6 +3,12 @@
 body {
   font-family: "Roboto", sans-serif;
   width: 360px;
+  overflow-y: auto;
+}
+
+* {
+  box-sizing: border-box;
+  scrollbar-width: none;
 }
 
 :root {
@@ -65,7 +71,7 @@ body {
   padding: 8px;
   border: 1px solid var(--border-color);
   border-radius: 14px;
-  width: 340px;
+  width: 360px;
   margin-bottom: 10px;
   outline: none;
 }
@@ -205,6 +211,7 @@ input:checked + .slider:before {
   background: var(--primary-color);
   padding: 10px;
   margin: -8px;
+  margin-bottom:0px;
 }
 
 .header h1 {
@@ -230,7 +237,8 @@ input:checked + .slider:before {
   border-bottom: 1px solid var(--border-color);
   background: white;
   display: flex;
-  margin: -8px;
+  margin-left: -8px;
+  margin-right:-8px;
   margin-bottom: 10px;
 }
 
@@ -248,7 +256,7 @@ input:checked + .slider:before {
   border: unset;
   background: white;
   color: var(--text-color);
-  font-weight:500;
+  font-weight: 500;
 }
 
 .dark-mode .tab {
