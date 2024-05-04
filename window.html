@@ -11,19 +11,22 @@
 <body>
   <div class="header">
     <h1>Ambrecoin</h1>
-    <label class="switch">
-      <input type="checkbox" id="dark-mode-toggle">
-      <span class="slider round"></span>
-    </label>
+    <div class="mods">
+      <select id="change-currency-select">
+        <option value="usd">USD</option>
+        <option value="eur">EUR</option>
+        <option value="jpy">JPY</option>
+        <option value="rub">RUB</option>
+        <option value="cny">CNY</option>
+      </select>
+      <label class="switch">
+        <input type="checkbox" id="dark-mode-toggle">
+        <span class="slider round"></span>
+      </label>
+    </div>
   </div>
   <input type="text" id="search-input" placeholder="Search by name...">
-  <select id="change-currency-select">
-    <option value="usd">USD</option>
-    <option value="eur">EUR</option>
-    <option value="jpy">JPY</option>
-    <option value="rub">RUB</option>
-    <option value="cny">CNY</option>
-  </select>
+
   <table id="coins-table">
     <thead>
       <tr>

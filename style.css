@@ -49,8 +49,8 @@ body {
 #search-input {
   padding: 8px;
   border: 1px solid #ccc;
-  border-radius: 4px;
-  width: 227px;
+  border-radius: 14px;
+  width: 300px;
   margin-bottom: 10px;
   outline: none;
 }
@@ -60,7 +60,7 @@ body {
 }
 
 #change-currency-select {
-  padding: 8px;
+  padding: 1px;
   border: 1px solid #ccc;
   border-radius: 4px;
   background-color: #fff;
@@ -68,6 +68,7 @@ body {
   font-size: 14px;
   cursor: pointer;
   outline: none;
+  border-radius:14px;
 }
 
 #change-currency-select option {
@@ -112,7 +113,9 @@ body::-webkit-scrollbar {
 body::-webkit-scrollbar-track {
   background: #f1f1f1;
 }
-
+body.dark-mode::-webkit-scrollbar-track {
+  background:#333;
+}
 /* Handle */
 body::-webkit-scrollbar-thumb {
   background: linear-gradient(135deg, #6a8feb, #a17df4);
@@ -201,4 +204,10 @@ input:checked + .slider:before {
   margin: unset;
   font-size:20px;
   color:white;
+}
+
+.mods {
+  display: flex;
+  align-items: center;
+  gap: 5px;
 }
