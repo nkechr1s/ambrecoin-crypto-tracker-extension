@@ -5,6 +5,21 @@ body {
   width: 360px;
 }
 
+:root {
+  --primary-color: #4608ad;
+  --secondary-color: #f2f2f2;
+  --text-color: #333;
+  --text-color-light: #999;
+  --bg-color-light: #f1f1f1;
+  --bg-color-dark: #222;
+  --border-color: #ccc;
+  --positive-color: #20c997;
+  --negative-color: #dc3545;
+  --scrollbar-track-color: #f1f1f1;
+  --scrollbar-thumb-color: linear-gradient(135deg, #6a8feb, #a17df4);
+  --scrollbar-thumb-hover-color: linear-gradient(135deg, #8c4eff, #6a00ff);
+}
+
 #coins-table {
   width: 100%;
   border-collapse: collapse;
@@ -12,18 +27,18 @@ body {
 
 #coins-table th,
 #coins-table td {
-  border: 1px solid #ccc;
+  border: 1px solid var(--border-color);
   padding: 8px;
   font-weight: 700;
 }
 
 #coins-table th {
-  background-color: #f2f2f2;
+  background-color: var(--secondary-color);
   color: black;
 }
 
 .dark-mode #coins-table th {
-  background-color: #333;
+  background-color: var(--bg-color-dark);
   color: white;
 }
 
@@ -34,11 +49,11 @@ body {
 }
 
 .price-change {
-  color: #20c997;
+  color: var(--positive-color);
 }
 
 .price-change.negative {
-  color: #dc3545;
+  color: var(--negative-color);
 }
 
 .image-and-name {
@@ -48,7 +63,7 @@ body {
 
 #search-input {
   padding: 8px;
-  border: 1px solid #ccc;
+  border: 1px solid var(--border-color);
   border-radius: 14px;
   width: 340px;
   margin-bottom: 10px;
@@ -56,15 +71,15 @@ body {
 }
 
 #search-input::placeholder {
-  color: #999;
+  color: var(--text-color-light);
 }
 
 #change-currency-select {
   padding: 1px;
-  border: 1px solid #ccc;
+  border: 1px solid var(--border-color);
   border-radius: 4px;
   background-color: #fff;
-  color: #333;
+  color: var(--text-color);
   font-size: 14px;
   cursor: pointer;
   outline: none;
@@ -74,11 +89,10 @@ body {
 #change-currency-select option {
   padding: 8px;
   background-color: #fff;
-  color: #333;
+  color: var(--text-color);
   font-size: 14px;
 }
 
-/* Custom arrow icon */
 .select-arrow {
   position: absolute;
   top: 50%;
@@ -97,6 +111,7 @@ body {
   width: 25px;
   height: 25px;
 }
+
 .data-provider {
   display: flex;
   flex-direction: column;
@@ -109,27 +124,26 @@ body::-webkit-scrollbar {
   width: 8px;
 }
 
-/* Track */
 body::-webkit-scrollbar-track {
-  background: #f1f1f1;
+  background: var(--scrollbar-track-color);
 }
+
 body.dark-mode::-webkit-scrollbar-track {
-  background: #333;
+  background: var(--bg-color-dark);
 }
-/* Handle */
+
 body::-webkit-scrollbar-thumb {
-  background: linear-gradient(135deg, #6a8feb, #a17df4);
+  background: var(--scrollbar-thumb-color);
   border-radius: 8px;
 }
 
-/* Handle on hover */
 body::-webkit-scrollbar-thumb:hover {
-  background: linear-gradient(135deg, #8c4eff, #6a00ff);
+  background: var(--scrollbar-thumb-hover-color);
   cursor: pointer;
 }
 
 body.dark-mode {
-  background-color: #222;
+  background-color: var(--bg-color-dark);
   color: #fff;
 }
 
@@ -155,7 +169,6 @@ body.dark-mode {
   right: 3px;
   bottom: 3px;
   background-color: #ccc;
-  -webkit-transition: 0.4s;
   transition: 0.4s;
   border-radius: 14px;
 }
@@ -168,7 +181,6 @@ body.dark-mode {
   left: 0px;
   bottom: 0px;
   background-color: white;
-  -webkit-transition: 0.4s;
   transition: 0.4s;
   border-radius: 50%;
 }
@@ -182,8 +194,6 @@ input:focus + .slider {
 }
 
 input:checked + .slider:before {
-  -webkit-transform: translateX(22px);
-  -ms-transform: translateX(22px);
   transform: translateX(22px);
 }
 
@@ -192,11 +202,9 @@ input:checked + .slider:before {
   justify-content: space-between;
   flex-direction: row;
   align-items: center;
-  background: #4608ad;
+  background: var(--primary-color);
   padding: 10px;
-  margin-left: -8px;
-  margin-right: -8px;
-  margin-top: -8px;
+  margin: -8px;
 }
 
 .header h1 {
@@ -219,17 +227,18 @@ input:checked + .slider:before {
 
 .tabs {
   align-items: center;
-  border-bottom: 1px solid #ddd;
+  border-bottom: 1px solid var(--border-color);
   background: white;
   display: flex;
+  margin: -8px;
   margin-bottom: 10px;
-  margin-left: -8px;
-  margin-right: -8px;
 }
+
 .dark-mode .tabs {
-  background: #222;
-  border-bottom: 1px solid #222;
+  background: var(--bg-color-dark);
+  border-bottom: 1px solid #333;
 }
+
 .tab {
   cursor: pointer;
   padding: 1rem;
@@ -238,13 +247,15 @@ input:checked + .slider:before {
   position: relative;
   border: unset;
   background: white;
-  color: #7a7a7a;
+  color: var(--text-color);
+  font-weight:500;
 }
 
 .dark-mode .tab {
-  background: #222;
+  background: var(--bg-color-dark);
   color: white;
 }
+
 .dark-mode .active-tab {
   background: #333;
   border-bottom: 1px solid white;
@@ -253,8 +264,8 @@ input:checked + .slider:before {
 }
 
 .active-tab {
-  background: #f4f1fa;
-  border-bottom: 1px solid #4608ad;
-  color: #4608ad;
+  background: var(--secondary-color);
+  border-bottom: 1px solid var(--primary-color);
+  color: var(--primary-color);
   pointer-events: none;
 }
