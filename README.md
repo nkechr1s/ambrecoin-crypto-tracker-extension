@@ -30,4 +30,4 @@ CryptoTracker Extension is your go-to tool for effortlessly monitoring cryptocur
 Contributions are welcome! Feel free to fork the repository and submit pull requests for any enhancements or bug fixes.
 
 ## License
-This project is licensed under the [MIT License](LICENSE).
+This project is licensed under the [MIT License]
