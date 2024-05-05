@@ -1,4 +1,4 @@
-# CryptoTracker Extension
+# Ambrecoin - CryptoTracker Extension
 
 ## Introduction
 CryptoTracker Extension is your go-to tool for effortlessly monitoring cryptocurrency prices right from your browser. Whether you're a seasoned investor or just getting started in the world of crypto, this extension provides a user-friendly interface to stay informed about the latest market trends.
