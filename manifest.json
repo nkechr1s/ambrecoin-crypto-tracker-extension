@@ -6,17 +6,6 @@
   "background": {
     "service_worker": "background.js"
   },
-  "permissions": [
-    "tabs",
-    "bookmarks",
-    "activeTab",
-    "contextMenus",
-    "storage",
-    "https://*.google.com/"
-  ],
-  "host_permissions": [
-    "https://api.coingecko.com/"
-  ],
   "action": {
     "default_icon": "icon.png",
     "default_popup": "window.html"
