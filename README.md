@@ -28,6 +28,7 @@ CryptoTracker Extension is your go-to tool for effortlessly monitoring cryptocur
 
 ## Contributing
 Contributions are welcome! Feel free to fork the repository and submit pull requests for any enhancements or bug fixes.
-
+## Download
+Download the extension on chrome webstore https://chromewebstore.google.com/detail/ambrecoin-crypto-prices/dpcmehikllndnhclamckhcnlhfokbakk
 ## License
 This project is licensed under the [MIT License]
